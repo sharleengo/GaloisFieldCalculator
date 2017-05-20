@@ -228,21 +228,36 @@ def galoisDiv(A,B,P,m):
 print "\n		( Galois Field Caluculator )"
 print "....................................... (enter 'q' to Quit)\n"
 while (True):
-	A = raw_input("Enter a polynomial A(x): ")
-	if(A.lower()=='q'):
-		exit()
-	A = map(int,A.split())
+	
+	while (True):	
+		A = raw_input("Enter a polynomial A(x): ")
+		if(A.lower()=='q'):
+			exit()
+		try:
+			A = map(int,A.split())
+			break
+		except ValueError:
+			print "\nThat is not a valid format for input A(x). Please enter again...\n"
 
-	B = raw_input("Enter a polynomial B(x): ")
-	if(B.lower()=='q'):
-		exit()
-	B = map(int,B.split())
+	while (True):
+		B = raw_input("Enter a polynomial B(x): ")
+		if(B.lower()=='q'):
+			exit()
+		try:
+			B = map(int,B.split())
+			break
+		except ValueError:
+			print "\nThat is not a valid format for input B(x). Please enter again...\n"
 
-
-	P = raw_input("Enter an irreducible polynomial P(x): ")
-	if(P.lower()=='q'):
-		exit()
-	P = map(int,P.split())
+	while (True):
+		P = raw_input("Enter a polynomial P(x): ")
+		if(P.lower()=='q'):
+			exit()
+		try:
+			P = map(int,P.split())
+			break
+		except ValueError:
+			print "\nThat is not a valid format for input P(x). Please enter again...\n"
 
 	# Remove unnecessary 0's in from of the given polynomial if there are any
 	removeZeros(A)
