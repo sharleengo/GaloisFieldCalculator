@@ -13,3 +13,10 @@ For instance, A(x) = x^3+7x+6 is enterred as: 1 0 7 6.
 
 For more information on how Galois Field operations work, please visit: 
     http://www.ee.unb.ca/tervo/ece4253/poly3.shtml
+
+
+## Installation/Compilation instruction:
+This program is written in Python, so its only requirement is to have Python installed on your system.
+To run this program:
+1.  Open your terminal.
+2.  Enter:   python gf.py
